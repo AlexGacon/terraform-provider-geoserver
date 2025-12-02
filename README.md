@@ -61,3 +61,13 @@ resource "geoserver_datastore" "default" {
   db_pass        = "postgres"
 }
 ```
+
+Documentation
+----------------------
+
+The documentation is generated using the Terraform Plugin Doc utility from Hashicorp.
+
+See https://github.com/hashicorp/terraform-plugin-docs on how to install and use it.
+
+- The `examples` folder is expected to contain TF files which will be injected in each resource page
+- The `templates` folder is expected to contain overloads or custom templating for rendering the documentation
