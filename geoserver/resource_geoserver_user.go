@@ -33,7 +33,7 @@ func resourceGeoserverUser() *schema.Resource {
 			},
 			"enabled": {
 				Type:        schema.TypeBool,
-				Required:    true,
+				Optional:    true,
 				Default:     true,
 				Description: "Is the user account enabled?",
 			},
@@ -148,7 +148,7 @@ func resourceGeoserverUserImport(d *schema.ResourceData, meta interface{}) ([]*s
 
 	log.Printf("[INFO] Importing Geoserver User `%s` in service `%s`", userName, serviceName)
 
-	err := resourceGeoserverStyleRead(d, meta)
+	err := resourceGeoserverUserRead(d, meta)
 	if err != nil {
 		return []*schema.ResourceData{}, err
 	}
